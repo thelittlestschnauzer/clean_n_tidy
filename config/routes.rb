@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :chores
-  resources :rooms
+  resources :rooms do
+    resources :chores
+  end
 
   root to: 'pages#home'
 
