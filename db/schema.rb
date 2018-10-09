@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_201402) do
+ActiveRecord::Schema.define(version: 2018_10_09_202729) do
+
+  create_table "chores", force: :cascade do |t|
+    t.string "name"
+    t.date "date_assigned"
+    t.string "assigned_to"
+    t.boolean "completed", default: true
+    t.integer "room_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
