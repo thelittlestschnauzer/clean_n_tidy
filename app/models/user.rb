@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   validates :email, presence: true
   validates :email, uniqueness: true
-  validates :passowrd, presence: true
+  validates :password, presence: true
 
-  belongs_to :user
-  belongs_to :room
+  has_many :rooms
+  has_many :chores, through: :rooms
 end

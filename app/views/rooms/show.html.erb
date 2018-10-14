@@ -1,0 +1,8 @@
+<%= link_to 'All Rooms', rooms_path %>
+<h1><%= @room.title %></h1>
+
+<%= image_tag(@room.image.url, alt: 'Image') if @room.image? %>
+
+<p>List of Chores</p>
+
+<p><%= link_to 'Edit', edit_room_path(@room) %></p>

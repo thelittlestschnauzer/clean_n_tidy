@@ -18,9 +18,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'carrierwave'
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
+gem 'mini_magick', '~> 4.8'
+gem 'file_validators'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

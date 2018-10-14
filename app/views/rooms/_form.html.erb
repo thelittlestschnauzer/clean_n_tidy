@@ -1,0 +1,18 @@
+  <div class="room-form" id="room-form">
+    <%= render 'shared/errors', object: @room %>
+
+    <h2>Create a New Room</h2>
+    <%= form_for @room do |f| %>
+
+      <%= f.text_field :title, placeholder: 'Title of Room', class: 'form-control' %><br />
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+      <%= f.hidden_field :image_cache %>
+      <%= f.text_field :remote_image_url %>
+      <small>Enter URL to an image</small>
+
+      <%= f.submit %>
+
+    <% end %>
+
+  </div>

@@ -1,2 +1,29 @@
-<header class="navbar navbar-fixed-top">
-</header>
+<nav class="navbar navbar-top navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <%= link_to 'Clean-N-Tidy', root_path, class: 'navbar-brand' %>
+        </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= current_user.email %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Rooms', rooms_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Login', login_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign Up', signup_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

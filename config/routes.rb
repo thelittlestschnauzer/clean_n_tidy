@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   devise_scope :user do
-    get 'sign_up', to: 'devise/registrations#new'
+    get 'signup', to: 'devise/registrations#new'
   end
 
   devise_scope :user do

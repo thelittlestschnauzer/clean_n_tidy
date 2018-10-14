@@ -3,7 +3,7 @@ class Chore < ApplicationRecord
   validates :name, presence: true
   validates :date_assigned, presence: true
 
-  has_many :rooms
-  has_many :chores, through: :rooms
-  
+  belongs_to :user
+  belongs_to :room
+
 end
