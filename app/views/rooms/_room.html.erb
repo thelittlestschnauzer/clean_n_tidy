@@ -1,6 +1,21 @@
-<h2><%= link_to room.title, room_path(room) %></h2>
 
+<div class="container">
+  <div class="card">
+    <% @rooms.each do |room| %>
+      <h2><%= link_to room.title, room_path(room) %></h2>
+    <ul>
+      <li>SWEEP</li>
+      <li>STEAM</li>
+    </ul>
+    <% end %>
+  </div>
 
-<p>chores will be placed in here most likely</p>
-
-<p><%= link_to 'Edit', edit_room_path(room) %></p>
+  <div class="card">
+    <h2>Room Title</h2>
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+  
+  <p><%= link_to 'Edit', edit_room_path(room) %> | <%= link_to 'Delete', room_path(room), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>

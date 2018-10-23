@@ -1,13 +1,12 @@
-<nav class="navbar navbar-top navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="container">
-      <ul class="nav nav-tabs">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-logo">
+      <%= link_to 'Clean-N-Tidy', root_path, class: 'navbar-brand' %>
+    </div>
+      <ul class="nav ml-auto"
+        <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to 'Clean-N-Tidy', root_path, class: 'navbar-brand' %>
-        </li>
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= current_user.email %>
+          <%= current_user.email  %>
         </li>
         <li class="nav-item">
           <%= link_to 'Rooms', rooms_path, class: 'nav-link' %>
@@ -24,6 +23,5 @@
         </li>
       <% end %>
       </ul>
-    </div>
   </div>
 </nav>

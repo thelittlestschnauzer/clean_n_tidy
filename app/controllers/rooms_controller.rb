@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show, :edit, :update]
+  before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   def index
     @rooms = Room.order('created_at DESC')
@@ -34,12 +34,14 @@ class RoomsController < ApplicationController
 
   def destroy
     @room.destroy
+    redirect_to rooms_path
+    
   end
 
   private
 
   def room_params
-    params.require(:room).permit(:title, :image, :image_cache, :remote_image_url) 
+    params.require(:room).permit(:title, :image, :image_cache, :remote_image_url)
   end
 
   def set_room

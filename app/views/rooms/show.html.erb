@@ -1,8 +1,19 @@
-<%= link_to 'All Rooms', rooms_path %>
-<h1><%= @room.title %></h1>
 
-<%= image_tag(@room.image.url, alt: 'Image') if @room.image? %>
+<section class="container">
+    <header>
+      <h2><%= @room.title %></h2>
+    </header>
+    <%= image_tag(@room.image.url, alt: 'Image') if @room.image? %>
 
-<p>List of Chores</p>
+    <article>
 
-<p><%= link_to 'Edit', edit_room_path(@room) %></p>
+      <h4>List of Chores</h4>
+        <ul>
+          <li>dust surfaces</li>
+        </ul>
+    </article>
+
+    <footer>
+    </footer>
+    <p class="links"><%= link_to 'Back', rooms_path %> | <%= link_to 'Edit', edit_room_path(@room) %> | <%= link_to 'Delete', room_path(@room), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </section>

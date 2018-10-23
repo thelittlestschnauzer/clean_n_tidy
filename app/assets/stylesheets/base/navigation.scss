@@ -1,0 +1,22 @@
+nav.navbar {
+  border-bottom: 1px solid #D7E2E8;
+  height: 90px;
+  background-color: #E7EAF1;
+  color: #4F5A5E;
+  .navbar-logo a {
+    text-transform: uppercase;
+    color: #2d2d2d;
+    font-size: 2em;
+    &:hover {
+      color: #4F5A5E;
+    }
+  }
+
+  .nav .nav-item a {
+    color: #2d2d2d;
+    text-transform: uppercase;
+    &:hover {
+      color: #4F5A5E;
+    }
+  }
+}
