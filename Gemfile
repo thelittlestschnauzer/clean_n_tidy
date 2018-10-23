@@ -22,6 +22,8 @@ gem 'carrierwave'
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 gem 'file_validators'
+gem 'cocoon'
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

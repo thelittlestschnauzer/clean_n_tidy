@@ -1,0 +1,23 @@
+<%= form_for(@chore) do |f| %>
+  <% if @chore.errors.any? %>
+    <%= pluralize(@chore.errors.count, "error") %> prohibited this Room from being saved:
+
+    <%= @chore.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+  <div class="fields">
+    <%= f.text_field :name, placeholder: "Add Chore", class: 'form-control' %>
+  </div>
+
+  <div class="fields">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
+
+  
+
+  <%= f.submit %>
+
+  <% end %>

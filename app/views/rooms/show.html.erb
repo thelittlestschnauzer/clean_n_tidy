@@ -6,11 +6,11 @@
     <%= image_tag(@room.image.url, alt: 'Image') if @room.image? %>
 
     <article>
-
-      <h4>List of Chores</h4>
+      <% @room.chores.each do |chore| %>
         <ul>
-          <li>dust surfaces</li>
+          <li><%= chore.name %></li>
         </ul>
+        <% end %>
     </article>
 
     <footer>

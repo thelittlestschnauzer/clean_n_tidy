@@ -1,53 +1,16 @@
-/* card styles */
-
-/* styles for the show page */
-// .container {
-//   width: 50em;
-//   height: 30em;
-//   margin: 5em auto;
-//   background-color: #edefee;
-//   border: 0.1em solid #c6c6c6;
-//   border-radius: 1.0em;
-//   h2 {
-//     text-align: center;
-//     font-size: 2em;
-//   }
-// }
-
-// .card header {
-//   border-radius: 1.5em 1.5em 0 0;
-// }
-//
-// .card footer {
-//   border-radius: 0 0 1.5em 1.5em;
-// }
-//
-// .card article h4 {
-//   margin-left: 20%;
-// }
-//
-// .card header img {
-//   max-height: 100%;
-//   float: right;
-//   border-radius: 5px;
-// }
-//
-// .card .links {
-//   text-align: center;
-//   a {
-//   color: #1a2553;
-//   &:hover {
-//     text-decoration: none;
-//     color: #fe3648;
-//     }
-//   }
-// }
 
 /*  style for index page of rooms */
+
+.rooms-list h1 {
+  margin-bottom: 100px;
+}
 
 .container {
   column-width: 250px;
   column-gap: 20px;
+  p.links {
+    text-align: center;
+  }
 }
 
 .card {
@@ -59,3 +22,5 @@
   margin: 0 0 1em 0;
   height: 400px;
 }
+
+/* form for making a new room with chores */
