@@ -7,11 +7,11 @@ class RoomsController < ApplicationController
 
   def new
     @room = Room.new
-    2.times { @room.chores.build }
+    @room.chores.build
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = Room.create(room_params)
     if @room.save
       redirect_to rooms_path
     else

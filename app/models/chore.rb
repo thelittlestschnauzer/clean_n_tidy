@@ -3,6 +3,6 @@ class Chore < ApplicationRecord
   validates :name, presence: true
   # validates :date_assigned, presence: true
 
-  belongs_to :room
+  belongs_to :room, optional: true 
 
 end

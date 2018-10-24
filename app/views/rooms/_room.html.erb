@@ -1,13 +1,14 @@
 
 <div class="container">
-    <%= @rooms.each do |room| %>
+
+    <% for room in @rooms %>
         <div class="card">
           <h2><%= link_to room.title, room %>
-            <% for chore in room.chores %>
             <ul>
+              <% for chore in room.chores %>
               <li><%= chore.name %></li>
             </ul>
-          <% end %>
-      </div>
-    <% end %>
+            <% end %>
+        </div>
+       <% end %>
 </div>

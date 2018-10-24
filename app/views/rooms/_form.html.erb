@@ -11,13 +11,15 @@
       <%= f.text_field :remote_image_url %>
       <small>Enter URL to an image</small>
     </div>
-    <%= submit_tag "Add Chore", type: 'button', id: 'addChore',
-            onclick: 'addChoreField()' %>
-        <div id="choreHeader" style="display:none">
+      <div class="chores">
+        <%= f.fields_for :chores do |chore| %>
+          <%= render 'chore_fields', f: chore %>
+        <% end %>
+      </div>
 
-          <ul id="myList">
-          </ul>
         <div class="actions">
         <%= f.submit 'Create Room with Chores' %>
+        <%= link_to_add_association 'Add Chore', f, :chores, class: 'btn btn-primary', data: {
+          association_insertion_node: '.chores', association_insertion_method: :append } %>
       </div>
     <% end %>
