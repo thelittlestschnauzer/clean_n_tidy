@@ -3,21 +3,28 @@
   <head>
     <title>Clean-N-Tidy</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="/path/to/masonry.pkgd.min.js"></script>
-
+    <script type="text/javascript" async src="https://www.gstatic.com/recaptcha/api2/v1540189908068/recaptcha__en.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-KD66QP"></script>
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-KD66QP');
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,700i">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: white;">
     <%= render 'layouts/navigation' %>
 
       <p class="notice"><%= notice %></p>

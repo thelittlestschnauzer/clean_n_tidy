@@ -1,0 +1,28 @@
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0 );
+	}
+	&.back { text-decoration:none; position:absolute; top:30px; left:20px; color: #B7B7B7; font: $brandon;
+		i {color: $blue;margin-right:20px; vertical-align:middle; display: inline-block; margin-top: -6px;}
+	}
+}
+
+.white { color: $white;
+	p, a, span {color: $white;}
+}
+.black { color: $black;
+	p, a, span {color: $black;}
+}

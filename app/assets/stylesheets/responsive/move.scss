@@ -1,4 +1,36 @@
-@media only screen and (min-width: 1030px)
-  .big-wrap {
-    padding: 0 50px;
+// @media only screen and (min-width: 1030px)
+  // .big-wrap {
+  //   padding: 0 50px;
+  // }
+
+  @media only screen and (min-width: 1250px){
+  .header .top-nav {
+    display: inline-block;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    background: none;
+    width: auto;
+    padding: 0;
+    float: right;
+    border-bottom: 0;
+    margin: 0;
+    clear: both;
+    transition: padding .2s;
+  }
+
+  .header .top-nav li {
+    padding: 0 20px 24px;
+    position: relative;
+    float: left;
+  }
+}
+
+  @media only screen and (min-width: 1250px) {
+    .header {
+      .top-nav {
+        li {  padding: 0 20px 24px; }
+      }
+    }
   }

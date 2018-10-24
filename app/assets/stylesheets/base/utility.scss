@@ -1,0 +1,117 @@
+/*********************
+UTILITY STYLES
+*********************/
+
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+
+.float-left{float: left;}
+.float-right{float: right;}
+.marg-top-20{margin-top: 20px;}
+.marg-top-40{margin-top: 40px;}
+.marg-top-60{margin-top: 60px;}
+.marg-top-80{margin-top: 80px;}
+
+.marg-btm-20{margin-bottom: 20px;}
+.marg-btm-40{margin-bottom: 40px;}
+.marg-btm-60{margin-bottom: 60px;}
+.marg-btm-80{margin-bottom: 80px;}
+
+.table{display: block;
+	.row, .cell{display: block;}
+}
+
+.table.mobile-cell {
+	.cell { width:100%; display:block;}
+}
+
+.bulleted-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  >li {
+    margin-bottom: .5rem;
+  }
+}
+
+.bulleted-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  >li {
+    margin-bottom: .5rem;
+  }
+}
+
+.numbered-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  >li {
+    margin-bottom: .5rem;
+  }
+}
+
+.m-hide{display: none;}
+.m-show{display: block;}
+
+.rel-home {position:relative; z-index:2;}
+.center {text-align:center;}
+.upp {text-transform: uppercase;}
+.serif {font-family: 'Montserrat'; letter-spacing:0;}
+.brandon {font-family:'Montserrat'; letter-spacing:1px;}
+.large {font-size:20px; font-weight:500; padding-left:40px;
+	i {font-size:35px; vertical-align:middle;position:absolute; left:0;}
+	}
+.gray {color:#2E2F30 !important; font-size:22px;}
+.txt-blue {
+  color: $blue;
+}
+.txt-green {
+  color: $green;
+}
+.fltR {float:right;}
+.fltL {float:left;}
+.bold {font-weight: 600;}
+.btn {
+	display:inline-block; padding: 8px 20px; font-size:14px; border: 3px solid $blue; font-weight: 600;
+	color: #4F5A5E; font-family:'Montserrat'; text-transform: uppercase; text-decoration:none; cursor: pointer;
+
+	&.white {
+		border: 3px solid $white; color: $white;
+
+		&:hover {background-color: #fff; color: $blue;}
+	}
+	&.blue {
+		background-color: $blue; color: $white;
+
+		&:hover {background-color: $white; color: $blue;}
+	}
+	&.bg-white {background:$white;border: 3px solid $white; color:$blue; }
+	&.twenty {margin-top:20px;}
+	&.selected,
+	&:hover {background:$blue; color:$white;}
+	img {vertical-align: bottom; margin-right:15px;}
+	&.active {background:$blue; color:$white;}
+}
+.fancybox-inner {
+	i {
+		margin-right: 10px; font-size: 60px;
+
+		&:before {vertical-align: middle;}
+	}
+	h3.thin {margin: 0 0 20px;}
+}
+
+.owl-nav { font-family: 'icomoon'; font-size:35px;
+  .owl-prev { position:absolute; left:-20px; top:35%; }
+  .owl-next { position:absolute; right:-20px; top:35%; }
+  }
+.owl-dots {left:0; right:0; bottom:80px; text-align:center;
+  .owl-dot { display: inline-block; height:10px; width:10px;background:#B7B7B7; margin:0px 5px;
+      &.active {background:$blue;}
+      }
+  }
+.owl-controls {display: none;}
+#owl {
+.btn {left:0; right:0; bottom:0; width:200px; margin: auto; opacity:0;}
+
+}

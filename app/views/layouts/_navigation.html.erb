@@ -1,30 +1,52 @@
-<header class="header" role="banner">
-  <div class="rel">
-  <div class="big-wrap cf">
-    <%= link_to 'Clean-N-Tidy', root_path, class: 'logo' %>
-    <div class="top">
-      <div class="quick-links">
-      </div>
-      <nav role="navigation" itemscope>
-        <ul id="menu-main-menu" class="nav top-nav cf" style="display:block">
-        <% if user_signed_in? %>
-        <li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page">
-          <%= current_user.email  %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Rooms', rooms_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to 'Login', login_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign Up', signup_path, class: 'nav-link' %>
-        </li>
-      <% end %>
-      </ul>
-  </div>
-</header>
+
+<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+		<div class="rel">
+			<div class="big-wrap cf">
+				<%= link_to 'Grit and Grace', root_path, class: 'logo' %>
+				<div class="top">
+					<div class="quick-links">
+					  <a href="#">ABOUT</a> |
+						<a href="#">BLOG</a> |
+						<a href="#" target="_blank">CUSTOMER SUPPORT</a> |
+						<a href="#">CONTACT</a> |
+						<%= link_to 'SIGN IN', login_path %>
+					</div>
+
+					<div class="mobile-nav">
+						<span class="ham">
+              <div id="nav-toggle" href="#">
+                <span></span>
+              </div>
+            </span>
+					</div>
+
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <% if user_signed_in? %>
+						<ul id="menu-main-menu" class="nav top-nav cf">
+              <li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-311">
+                <%= link_to 'Rooms', rooms_path %>
+                <ul class="sub-menu">
+	                 <li id="menu-item-4203" class="menu-item menu-item-type-post_type menu-item-object-markets current-menu-item menu-item-4203">
+                     <%= link_to 'add room', new_room_path %>
+                   </li>
+                 </ul>
+                </li>
+                <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
+                  <a href="#">Clean & Organized</a>
+                </li>
+                <% else %>
+                    <li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
+                      <%= link_to 'Sign Up', signup_path %>
+                    <ul class="sub-menu">
+                    	<li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310">
+                        <%= link_to 'Log in', login_path %>
+                      </li>
+                    </ul>
+                    </li>
+                    <% end %>
+                    </ul>
+                  </nav>
+				</div>
+			</div>
+		</div>
+	</header>

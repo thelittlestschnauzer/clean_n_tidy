@@ -1,0 +1,63 @@
+.center {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.upp {
+  text-transform: uppercase;
+}
+
+.m-center {
+  text-align: center;
+}
+
+.n-center {
+  text-align: center;
+}
+
+.n-hide {
+  display: none;
+}
+
+.banner {
+  position: relative;
+  padding: 180px 0 100px;
+  border-bottom: 2px solid #fff;
+  background-color: #ededed;
+  background-size: cover;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -5%;
+    left: 0;
+    background: url('../images/triangle.svg'), url('../images/cube-pattern.svg');
+    background-position: 100% 100%, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 500px auto, cover;
+    z-index: 2;
+  }
+  &:after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+  }
+  .banner-title {
+    font-size: 1.5em;
+    margin-bottom: .75em;
+    font-weight: bold;
+  }
+}

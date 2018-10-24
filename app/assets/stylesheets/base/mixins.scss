@@ -1,0 +1,21 @@
+
+@mixin transition($time) {
+	-webkit-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
+}
+@mixin delay($time) {
+	-webkit-transition-delay: $time; -moz-transition-delay: $time; -o-transition-delay: $time;transition-delay: $time;
+}
+@mixin transform($rotate) {
+	-webkit-transform: translateZ(0) rotate($rotate);
+	-ms-transform: rotate($rotate); /* IE 9 */
+	-moz-transform:translateZ(0)  rotate($rotate); /* Chrome, Safari, Opera */
+	transform:translateZ(0) rotate($rotate);
+}
+@mixin column($num) {
+	-webkit-column-count: $num; /* Chrome, Safari, Opera */
+	-moz-column-count: $num; /* Firefox */
+	column-count: $num;
+}
