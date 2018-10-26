@@ -45,11 +45,23 @@
 
 .Home-Grid-menu a span.text {
   display: inline-block;
-  position: realtive;
+  position: relative;
   color: #8c8c8c;
   letter-spacing: 2px;
   font-weight: 300;
   font-size: 14px;
+}
+
+a.room-links {
+  display: inline-block;
+  position: relative;
+  color: #8c8c8c;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 14px;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 
@@ -80,6 +92,10 @@
     color: #EDDAE1;
     text-align: center;
     border-bottom: 1px solid #EDDAE1;
+  }
+  .chore-list {
+    border-bottom: 1px solid #EDDAE1;
+    color: #EDDAE1;
   }
 }
 

@@ -2,7 +2,7 @@
 <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 		<div class="rel">
 			<div class="big-wrap cf">
-				<%= link_to 'Grit and Grace', root_path, class: 'logo' %>
+				<%= link_to 'GRIT & GRACE', root_path, class: 'logo' %>
 				<div class="top">
 					<div class="quick-links">
 					  <a href="#">ABOUT</a> |
@@ -32,16 +32,19 @@
                  </ul>
                 </li>
                 <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212">
-                  <a href="#">Clean & Organized</a>
+                  <%= link_to 'LOG OUT', logout_path %>
                 </li>
+							</ul>
                 <% else %>
-                    <li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208">
+								<ul id="menu-main-menu" class="nav top-nav cf">
+                    <li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-311">
                       <%= link_to 'Sign Up', signup_path %>
                     <ul class="sub-menu">
-                    	<li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310">
+                    	<li id="menu-item-4203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310">
                         <%= link_to 'Log in', login_path %>
                       </li>
                     </ul>
+									</ul>
                     </li>
                     <% end %>
                     </ul>

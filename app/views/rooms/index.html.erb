@@ -6,7 +6,7 @@
         <span class="text">ALL ROOMS</span>
       </a>
       <a class="active" data-filter="1">
-        <span class="text">ADD ROOM</span>
+        <span class="text"><%= link_to 'ADD ROOM', new_room_path, class: 'room-links' %></span>
       </a>
     </div>
   </div>
@@ -16,8 +16,10 @@
     <div class="wrapper">
       <% @rooms.each do |room| %>
       <div class="room-cards">
-        <h5 class="room-title"><%= room.title %></h5>
-        
+        <h5 class="room-title"><%= room.title  %></h5>
+        <ul>
+          <li class="chore-list">chore name</li>
+        </ul>
       </div>
       <% end %>
     </div>

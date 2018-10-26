@@ -20,6 +20,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    
     @chores = @room.chores
   end
 

@@ -1,4 +1,75 @@
-.signup-form, .login-form {
-  width: 60%;
-  margin: auto;
+.container {
+  margin-top: 150px;
+  height: 320px;
+  background-color: #3D436C;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.login-form {
+  width: 50%;
+  margin-top: 120px;
+  margin-left: 25%;
+  h2 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    text-transform: uppercase;
+  }
+  .login-email, .login-password {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    letter-spacing: 2px;
+  }
+  .login-button {
+    width: 30%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #EDDAE1;
+    color: #3D436C;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  .devise-links {
+    color: #EDDAE1;
+  }
+}
+
+.s-form {
+  height: 430px;
+}
+
+.signup-form {
+  width: 50%;
+  margin-top: 120px;
+  margin-left: 25%;
+  h2 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    text-transform: uppercase;
+  }
+  .signup-name, .signup-email, .signup-password {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    letter-spacing: 2px;
+  }
+  .signup-button {
+    width: 30%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #EDDAE1;
+    color: #3D436C;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  a.devise-links {
+    color: #EDDAE1;
+  }
 }
