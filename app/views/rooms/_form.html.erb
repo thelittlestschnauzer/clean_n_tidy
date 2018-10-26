@@ -5,21 +5,20 @@
       <%= f.text_field :title, placeholder: 'Title of Room', class: 'form-control room-form' %><br />
     </div>
     <div class="field">
-      <%= f.label :image %>
-      <%= f.file_field :image %>
+      <%= f.label :image, class: 'room-label' %>
+      <%= f.file_field :image, class: 'form-control' %><br />
       <%= f.hidden_field :image_cache %>
-      <%= f.text_field :remote_image_url %>
-      <small>Enter URL to an image</small>
+      <%= f.text_field :remote_image_url, class: 'form-control image-text' %>
+      <small class="room-text">Enter URL to an image</small>
     </div>
       <div class="chores">
         <%= f.fields_for :chores do |chore| %>
+        <%= link_to_add_association 'Add Chore', f, :chores, class: 'add-button form-control', data: {
+          association_insertion_node: 'chores', association_insertion_method: :append } %><br />
           <%= render 'chore_fields', f: chore %>
         <% end %>
-      </div>
 
-        <div class="actions">
-        <%= f.submit 'Create Room with Chores' %>
-        <%= link_to_add_association 'Add Chore', f, :chores, class: 'btn btn-primary', data: {
-          association_insertion_node: '.chores', association_insertion_method: :append } %>
-      </div>
+
+          <%= f.submit 'Create Room with Chores', class: 'room-button form-control' %><br />
+        </div>
     <% end %>

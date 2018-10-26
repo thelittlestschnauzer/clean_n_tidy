@@ -112,6 +112,82 @@ a.room-links {
   margin-bottom: 100px;
 }
 
+/* New Room Form and Edit form */
+
+.new-room, .edit-room {
+  width: 50%;
+  margin-top: 120px;
+  margin-left: 25%;
+  h1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    text-transform: uppercase;
+  }
+  .room-form, .room-label, .room-text {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #B7B7B7;
+    letter-spacing: 2px;
+  }
+
+  .remove-button a.add-button .new-room {
+    width: 30%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #EDDAE1;
+    color: #3D436C;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.chore-text {
+  margin-left: 30%;
+  a.btn-primary {
+    color: #EDDAE1;
+    background-color: #3D436C;
+  }
+}
+
+.chores {
+  a {
+  background-color: #EDDAE1;
+  color: #3D436C;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+    }
+  }
+}
+
+.nested-fields {
+  input {
+    color: #B7B7B7;
+    width: 50%;
+    border-radius: 2px;
+  }
+  a.remove-button {
+    width: 50%;
+    float: right;
+    text-align: center;
+  }
+}
+
+  .room-button {
+
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #EDDAE1;
+    color: #3D436C;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+
 // .container {
 //   column-width: 250px;
 //   column-gap: 20px;
