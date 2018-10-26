@@ -1,17 +1,108 @@
 
 /*  style for index page of rooms */
 
+.row {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  width: 1170px;
+}
+
+.Home-Grid-menu {
+  font-size: 0px;
+  margin: 50px 0px 16px;
+  text-align: center;
+  width: 100%;
+  .toggle {
+    display: block;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #B7B7B7;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 30px;
+    display: none;
+    white-space: nowrap;
+  }
+}
+
+.Home-Grid-menu a {
+  font-size: 14px;
+  line-height: 40px;
+  transition: all .3s;
+  -webkit-transtion: all .3s;
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  margin-left: 28px;
+}
+
+.Home-Grid-menu a span.text {
+  display: inline-block;
+  position: realtive;
+  color: #8c8c8c;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+.Home-Grid-container {
+  position: relative;
+  height: 1402px;
+  margin-top: 40px;
+}
+
+.wrapper {
+  border:1px solid transparent;
+  border-radius: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.wrapper > div {
+  border-radius: 2px;
+  background-color: #3D436C;
+  padding: 2em;
+  h5 {
+    color: #EDDAE1;
+    text-align: center;
+    border-bottom: 1px solid #EDDAE1;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+
+
+
 .rooms-list h1 {
   margin-bottom: 100px;
 }
 
-.container {
-  column-width: 250px;
-  column-gap: 20px;
-  p.links {
-    text-align: center;
-  }
-}
+// .container {
+//   column-width: 250px;
+//   column-gap: 20px;
+//   p.links {
+//     text-align: center;
+//   }
+// }
 
 .card {
   break-inside: avoid;

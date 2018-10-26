@@ -1,4 +1,24 @@
+<div class="row">
+  <div class="Home-Grid-menu wow fadeInUp" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInUp;">
+    <div class="title">All Rooms</div>
+    <div class="toggle">
+      <a class="active" data-filter="*">
+        <span class="text">ALL ROOMS</span>
+      </a>
+      <a class="active" data-filter="1">
+        <span class="text">ADD ROOM</span>
+      </a>
+    </div>
+  </div>
+</div>
 
-  <h1 class="text-center">List of Rooms to Clean</h1>
-    <p><%= link_to "Add Room", new_room_path %></p>
-      <%= render @rooms %>
+  <div class="Home-Grid-container" style="position: relative; height: 1402px;">
+    <div class="wrapper">
+      <% @rooms.each do |room| %>
+      <div class="room-cards">
+        <h5 class="room-title"><%= room.title %></h5>
+        
+      </div>
+      <% end %>
+    </div>
+  </div>
