@@ -1,8 +1,10 @@
 class Chore < ApplicationRecord
 
   validates :name, presence: true
-  # validates :date_assigned, presence: true
 
-  belongs_to :room, optional: true 
+
+  belongs_to :room, inverse_of: :chores, optional: true
+  belongs_to :user, inverse_of: :chores, optional: true
+  has_many :comments
 
 end

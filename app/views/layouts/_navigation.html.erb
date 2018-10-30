@@ -9,7 +9,7 @@
 						<a href="#">BLOG</a> |
 						<a href="#" target="_blank">CUSTOMER SUPPORT</a> |
 						<a href="#">CONTACT</a> |
-						<%= link_to 'SIGN IN', login_path %>
+						<%= link_to 'SIGN UP', signup_path %>
 					</div>
 
 					<div class="mobile-nav">
@@ -24,7 +24,7 @@
             <% if user_signed_in? %>
 						<ul id="menu-main-menu" class="nav top-nav cf">
               <li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-311">
-                <%= link_to 'Rooms', rooms_path %>
+                <%= link_to 'Rooms', root_path %>
                 <ul class="sub-menu">
 	                 <li id="menu-item-4203" class="menu-item menu-item-type-post_type menu-item-object-markets current-menu-item menu-item-4203">
                      <%= link_to 'add room', new_room_path %>

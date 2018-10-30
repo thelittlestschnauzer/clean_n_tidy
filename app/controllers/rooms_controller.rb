@@ -2,16 +2,16 @@ class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   def index
-    @rooms = Room.all.order('created_at DESC')
+    @rooms = current_user.rooms.all.order('created_at DESC')
   end
 
   def new
     @room = Room.new
-    @room.chores.build
+    @chore = @room.chores.new 
   end
 
   def create
-    @room = Room.create(room_params)
+    @room = current_user.rooms.create(room_params)
     if @room.save
       redirect_to rooms_path
     else
@@ -20,8 +20,6 @@ class RoomsController < ApplicationController
   end
 
   def show
-    
-    @chores = @room.chores
   end
 
   def edit
@@ -40,10 +38,11 @@ class RoomsController < ApplicationController
     redirect_to rooms_path
   end
 
+
   private
 
   def room_params
-    params.require(:room).permit(:title, :image, :image_cache, :remote_image_url, chores_attributes: [:id, :name, :date_assigned, :assigned_to, :completed, :_destroy])
+    params.require(:room).permit(:title, :image, :image_cache, :remote_image_url, chores_attributes: [:id, :name, :status, :room_id, :user_id, :_destroy])
   end
 
   def set_room

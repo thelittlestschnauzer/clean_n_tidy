@@ -1,26 +1,30 @@
-<div class="row">
-  <div class="Home-Grid-menu wow fadeInUp" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInUp;">
-    <div class="title">All Rooms</div>
-    <div class="toggle">
-      <a class="active" data-filter="*">
-        <span class="text">ALL ROOMS</span>
-      </a>
-      <a class="active" data-filter="1">
-        <span class="text"><%= link_to 'ADD ROOM', new_room_path, class: 'room-links' %></span>
-      </a>
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="Home-Grid-menu wow fadeInUp" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInUp;">
+      <div class="title">All Rooms</div>
+      <div class="toggle">
+        <a class="active" data-filter="*">
+          <span class="text">ALL ROOMS</span>
+        </a>
+        <a class="active" data-filter="1">
+          <span class="text"><%= link_to 'ADD ROOM', new_room_path, class: 'room-links' %></span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="Home-Grid-container" style="position: relative; height: 1402px;">
     <div class="wrapper">
       <% @rooms.each do |room| %>
       <div class="room-cards">
-        <h5 class="room-title"><%= room.title  %></h5>
+        <h5 class="room-title"><%= link_to room.title, room_path(room) %></h5>
         <ul>
-          <li class="chore-list">chore name</li>
+          <li class="chore-list">Chore name</li>
         </ul>
       </div>
       <% end %>
     </div>
   </div>
+  <% else %>
+    <%= render 'pages/home' %>
+  <% end %>

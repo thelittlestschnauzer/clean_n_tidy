@@ -9,5 +9,7 @@ class User < ApplicationRecord
   validates :password, presence: true
 
   has_many :rooms
-  has_many :chores, through: :rooms
+  
+  has_many :chores
+  has_many :comments, through: :chores
 end

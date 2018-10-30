@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   resources :rooms do
-    resources :chores
+    resources :chores 
   end
 
-  root to: 'pages#home'
+  root to: 'rooms#index'
+
 
 
   devise_scope :user do

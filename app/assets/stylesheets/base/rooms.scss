@@ -75,6 +75,15 @@ a.room-links {
   position: relative;
   height: 1402px;
   margin-top: 40px;
+  h5 {
+    a {
+      color: #EDDAE1;
+      &:hover {
+        text-decoration: none;
+        color: #B7B7B7;
+      }
+    }
+  }
 }
 
 .wrapper {
@@ -188,14 +197,34 @@ a.room-links {
     text-transform: uppercase;
   }
 
-// .container {
-//   column-width: 250px;
-//   column-gap: 20px;
-//   p.links {
-//     text-align: center;
-//   }
-// }
+/* room show page */
 
+.show-room {
+  h2 {
+    color: #EDDAE1;
+    text-transform: uppercase;
+    border-bottom: 1px solid #EDDAE1;
+    padding-top: 8px;
+  }
+}
+
+li.chore-list {
+  color: #EDDAE1;
+  border-bottom: 1px solid #EDDAE1;
+}
+
+p.links {
+  color: #EDDAE1;
+  a {
+    color: #EDDAE1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+      text-decoration: none;
+      color: #B7B7B7;
+    }
+  }
+}
 .card {
   break-inside: avoid;
   page-break-inside: avoid;
